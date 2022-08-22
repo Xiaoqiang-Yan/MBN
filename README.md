@@ -5,13 +5,13 @@ This is our pytorch implementation for our submitted paper: Mutual Boost Network
 
 python==3.6
 
-pytorch
+pytorch==1.8.0
 
-numpy
+numpy==1.21.1
 
-sklearn
+sklearn==0.24.2
 
-munkres
+munkres==1.1.4
 
 ## Run Code
 For example: 
