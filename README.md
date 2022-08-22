@@ -18,7 +18,7 @@ For example:
 ```python
 python main.py --name acm
 ```
-For file data/cite/cite.txt exceeds the GitHub's file size limit of 100 MB, the complete datasets can be download from: 
+For the file data/cite/cite.txt exceeds GitHub's file size limit of 100 MB, the complete datasets can be download from: 
 
 Aliyun Netdisk:
 
