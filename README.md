@@ -1,5 +1,5 @@
 # MBN
-This is our pytorch implementation for our submitted paper: Mutual Boost Network for Attributed Graph Clustering.
+This is a pytorch implementation for our submitted paper: Mutual Boost Network for Attributed Graph Clustering.
 
 ## Environment Requirement
 
