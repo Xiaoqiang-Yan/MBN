@@ -50,7 +50,6 @@ def train(model, x, y):
         re_loss = 1 * ae_loss + 1 * loss_gae
         kl_loss = F.kl_div(q.log(), p, reduction='batchmean')
         q1q_loss = F.kl_div(q1.log(), q, reduction='batchmean')
-        # abl_loss = F.kl_div(q1.log(), p, reduction='batchmean')
         loss = 1 * re_loss + args.alpha * kl_loss + args.beta * q1q_loss
         q1p_loss = F.kl_div(q1.log(), p, reduction='batchmean')
         optimizer.zero_grad()
@@ -60,11 +59,9 @@ def train(model, x, y):
         res1 = p.data.cpu().numpy().argmax(1) #P
         res2 = q.data.cpu().numpy().argmax(1) #Q
         res3 = q1.data.cpu().numpy().argmax(1) #Q1
-        res4 = p1.data.cpu().numpy().argmax(1)  # p1
 
         plist = eva(y, res1, str(epoch) + 'P')
         qlist = eva(y, res2, str(epoch) + 'Q')
-        p1list = eva(y, res4, str(epoch) + 'P1')
         acc, nmi, ari, f1 = eva(y, res3, str(epoch) + 'Q1')
 
         logger.info("epoch%d%s:\t%s" % (epoch, ' P', record_info(plist)))
