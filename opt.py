@@ -5,7 +5,6 @@ parser.add_argument('--name', type=str, default="pubmed")
 parser.add_argument('--cuda', type=bool, default=True)
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--n_z', type=int, default=10)
-parser.add_argument('--shuffle', type=bool, default=True)
 parser.add_argument('--alpha', type=int, default=10)
 parser.add_argument('--beta', type=int, default=10)
 
