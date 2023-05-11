@@ -178,7 +178,7 @@ def eva(y_true, y_pred, epoch=0):
 
 
 def get_data(dataset):
-    if dataset in ['cora', 'wiki', 'pubmed']:
+    if dataset in ['cora', 'phy', 'pubmed']:
         x_p = './data/{}/{}.npy'.format(dataset, dataset)
         y_p = './data/{}/{}_label.npy'.format(dataset, dataset)
         adj = load_cpw(dataset)
