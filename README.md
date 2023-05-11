@@ -20,6 +20,5 @@ python main.py --name acm
 ```
 For the file data/cite/cite.txt exceeds GitHub's file size limit of 100 MB, the complete datasets can be download from: 
 
-Aliyun Netdisk:
-
-https://www.aliyundrive.com/s/pX6JA9T1SrR  提取码: h6a7
+Google drive：
+[Click Here to Access](https://drive.google.com/drive/folders/1L4qs6tVQCNcwEnnWoUFPoYrHPSObCJ_j)
