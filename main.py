@@ -60,12 +60,8 @@ def train(model, x, y):
         res2 = q.data.cpu().numpy().argmax(1) #Q
         res3 = q1.data.cpu().numpy().argmax(1) #Q1
 
-        plist = eva(y, res1, str(epoch) + 'P')
-        qlist = eva(y, res2, str(epoch) + 'Q')
         acc, nmi, ari, f1 = eva(y, res3, str(epoch) + 'Q1')
 
-        logger.info("epoch%d%s:\t%s" % (epoch, ' P', record_info(plist)))
-        logger.info("epoch%d%s:\t%s" % (epoch, ' Q', record_info(qlist)))
         logger.info("epoch%d%s:\t%s" % (epoch, ' Q1', record_info([acc, nmi, ari, f1])))
 
         acc_reuslt.append(acc)
